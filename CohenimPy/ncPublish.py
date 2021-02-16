@@ -9,7 +9,7 @@ helpfull function for phblishing
 """
 import subprocess
 import os
-import src.config as config
+import config
 
 # %%
 def NBtoTex(current_NB_path,nb_name):    

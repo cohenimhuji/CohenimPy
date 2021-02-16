@@ -26,15 +26,17 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # %%
 # my functions and oter iports
-import src.config as config
-from src.config import my_pd as pd
-from src.config import my_plt as plt
-from src.config import my_colors as colors
+import config
+from config import my_pd as pd
+from config import my_plt as plt
+from config import my_colors as colors
 file_date = config.file_date
-from src.funct.ncDate import period
-from src.funct import ncDate, ncPlot, ncStat
-from src.funct.ncPlot import multi_save, add_Rec, plot1ax, plot2axs  
-from src.funct.ncStat import ols_fit,regs_plot
+import ncDate
+from ncDate import period
+import ncPlot
+import ncStat
+from ncPlot import multi_save, add_Rec, plot1ax, plot2axs  
+from ncStat import ols_fit,regs_plot
 
 # very importent - get Project Main Path
 project_path = config.project_path

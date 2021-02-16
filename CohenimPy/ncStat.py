@@ -2,9 +2,9 @@
 # Nimrod Cohen, November 2020
 # %% code_folding=[]
 # my functions and oter iports
-import src.config as config
-from src.config import my_pd as pd
-from src.config import my_plt as plt
+import config as config
+from config import my_pd as pd
+from config import my_plt as plt
 
 import numpy as np
 import statsmodels.api as sm

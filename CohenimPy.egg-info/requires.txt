@@ -1,0 +1,11 @@
+datetime
+IPython
+matplotlib
+numba
+numpy
+pandas
+pathlib
+pathos
+scipy
+statsmodels
+sympy
