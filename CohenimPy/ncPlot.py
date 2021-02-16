@@ -10,13 +10,13 @@ helpfull function for ploting and saving figure in usfull formats
 import numpy as np
 import subprocess
 # import PrettyTable as pt
-from config import my_pd as pd
+from CohenimPy.config import my_pd as pd
 #%%
 from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('pdf', 'png')
 #%%
 #import src.config.my_plt as plt
-from config import my_plt as plt
+from CohenimPy.config import my_plt as plt
 import matplotlib.colors as mcolors
 colors = list(mcolors.TABLEAU_COLORS) 
 colors1 = ['tab:blue','tab:cyan','tab:olive','tab:green','tab:gray']
