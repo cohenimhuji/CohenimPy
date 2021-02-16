@@ -96,7 +96,7 @@ def Get_from_FRED(id=id,path=path):
     df_info.to_csv(path+'fromFRED_info.csv')
     return
 
-#import CohenimPy.ncDate as ncData
+import CohenimPy.ncDate as ncData
 
 def Get_data(path=path):    
     return ncData.Get_data(path+'fromFRED_data.csv')
