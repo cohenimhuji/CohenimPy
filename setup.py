@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='CohenimPy',
-    version='0.0162',
+    version='0.0164',
     author='Cohen Nimrod',
     author_email='nimrod.cohen1@mail.huji.ac.il',
     description='Various insanely helpful functions',

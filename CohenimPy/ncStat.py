@@ -2,13 +2,12 @@
 # Nimrod Cohen, November 2020
 # %% code_folding=[]
 # my functions and oter iports
-import config as config
+import config 
 from config import my_pd as pd
 from config import my_plt as plt
 
 import numpy as np
 import statsmodels.api as sm
-
 
 # %%
 def col_that(name_str,columns):

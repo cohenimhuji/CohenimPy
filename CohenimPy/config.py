@@ -55,7 +55,7 @@ my_pd.options.display.float_format = '{:,.2f}'.format
 
 # %%
 
-import src.funct.proj_tree as tree
+import proj_tree as tree
 project_path = tree.get_project_root() 
 figs_path = 'reports/WorkingPaper_LaTeX/WP_figures/'
 
