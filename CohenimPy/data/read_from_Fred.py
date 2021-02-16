@@ -44,8 +44,6 @@ import src.config as config
 file_date = config.file_date
 project_path = config.project_path
 
-import src.funct.ncDate as ncData
-
 import pandas as pd    # Statistic module
 pd.set_option('precision', 1)
 pd.set_option('display.max_columns', None)
@@ -97,6 +95,8 @@ def Get_from_FRED(id=id,path=path):
     df_US.to_csv(path+'fromFRED_data.csv')
     df_info.to_csv(path+'fromFRED_info.csv')
     return
+
+#import CohenimPy.ncDate as ncData
 
 def Get_data(path=path):    
     return ncData.Get_data(path+'fromFRED_data.csv')

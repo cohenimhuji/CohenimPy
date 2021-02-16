@@ -6,10 +6,10 @@ Created on Mon Nov 16 11:23:37 2020
 @author: u30l
 """
 
-ShowSysPath = False
+ShowSysPath = True
 if ShowSysPath:
     import sys
-    print ('\n'.join(sys.path))
+    print (Config at '\n'.join(sys.path))
 #%% Configure the matplotlib plt
 import matplotlib.pyplot as my_plt
 
