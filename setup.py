@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='grgrlib',
+    name='CohenimPy',
     version='0.01',
-    author='Gregor Boehl',
-    author_email='admin@gregorboehl.com',
+    author='Cohen Nimrod',
+    author_email='cohenim@gmail.com',
     description='Various insanely helpful functions',
     packages=find_packages(),
     install_requires=[
