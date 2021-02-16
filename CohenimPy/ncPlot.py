@@ -47,7 +47,7 @@ bbox2= (0.9, -0.12)
 # plt.style.use('seaborn') # pretty matplotlib plots
 
 def printest():
-    print('Text OK')
+    print('Text pass very OK')
     return
 
 def list_rotate(seq, n):
