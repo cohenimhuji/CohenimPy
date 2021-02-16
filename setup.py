@@ -2,17 +2,25 @@ from setuptools import setup, find_packages
 
 setup(
     name='CohenimPy',
-    version='0.012',
+    version='0.013',
     author='Cohen Nimrod',
-    author_email='cohenim@gmail.com',
+    author_email='nimrod.cohen1@mail.huji.ac.il',
     description='Various insanely helpful functions',
     packages=find_packages(),
     install_requires=[
-        'sympy',
+        'datetime',
+        'IPython',
+        'matplotlib',
+        'numba',
+        'numpy',
+        'os',        
+        'pandas',
+        'pathlib',
+        'pathos',
         'scipy',
-            'pathos',
-            'matplotlib',
-            'numpy',
-            'numba'
+        'statsmodels',
+        'subprocess',
+        'sympy',
+        'sys'        
     ],
 )
