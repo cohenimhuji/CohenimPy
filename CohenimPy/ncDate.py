@@ -5,7 +5,7 @@ Created on Mon Nov 16 11:23:37 2020
 @author: u30l
 """
 from datetime import datetime
-from config import my_pd as pd
+from CohenimPy.config import my_pd as pd
 
 
 # %%

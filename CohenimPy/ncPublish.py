@@ -9,7 +9,7 @@ helpfull function for phblishing
 """
 import subprocess
 import os
-import config
+import CohenimPy.config as config
 
 # %%
 def NBtoTex(current_NB_path,nb_name):    
