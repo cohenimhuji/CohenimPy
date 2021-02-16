@@ -19,7 +19,7 @@ setup(
         'pathos',
         'scipy',
         'statsmodels',
-        'subprocess',
+        #'subprocess',
         'sympy',
         'sys'        
     ],
