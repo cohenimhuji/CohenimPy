@@ -13,7 +13,7 @@ setup(
         'matplotlib',
         'numba',
         'numpy',
-        'os',        
+        #'os',        
         'pandas',
         'pathlib',
         'pathos',
