@@ -21,6 +21,6 @@ setup(
         'statsmodels',
         #'subprocess',
         'sympy',
-        'sys'        
+        #'sys'        
     ],
 )
