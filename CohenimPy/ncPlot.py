@@ -16,7 +16,9 @@ from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('pdf', 'png')
 #%%
 #import src.config.my_plt as plt
-from CohenimPy.config import my_plt as plt
+#from CohenimPy.config import my_plt as plt
+import matplotlib.pyplot as plt
+
 import matplotlib.colors as mcolors
 colors = list(mcolors.TABLEAU_COLORS) 
 colors1 = ['tab:blue','tab:cyan','tab:olive','tab:green','tab:gray']
