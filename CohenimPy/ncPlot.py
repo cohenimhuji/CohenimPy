@@ -10,7 +10,8 @@ helpfull function for ploting and saving figure in usfull formats
 import numpy as np
 import subprocess
 # import PrettyTable as pt
-from CohenimPy.config import my_pd as pd
+#from CohenimPy.config import my_pd as pd
+import pandas as pd
 #%%
 from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('pdf', 'png')
@@ -49,7 +50,7 @@ bbox2= (0.9, -0.12)
 # plt.style.use('seaborn') # pretty matplotlib plots
 
 def printVersion():
-    print('Cohenim Version: 0.0162' )
+    print('Cohenim Version: 0.0168')
     return
 
 def list_rotate(seq, n):
