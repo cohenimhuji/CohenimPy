@@ -14,7 +14,6 @@ def get_project_root() -> Path:
 
 project_path = get_project_root() 
 
-
 # from https://stackoverflow.com/questions/9727673/list-directory-tree-structure-in-python
 def tree(dir_path: Path, prefix: str=''):
     """A recursive generator, given a directory Path object

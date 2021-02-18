@@ -9,16 +9,42 @@ helpfull function for ploting and saving figure in usfull formats
 """
 import numpy as np
 import subprocess
-# import PrettyTable as pt
-#from CohenimPy.config import my_pd as pd
+
+
+#%% Configure Pandas
 import pandas as pd
+pd.set_option('precision', 1)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_colwidth', None)
+# Reduce decimal points to 2
+pd.options.display.float_format = '{:,.2f}'.format
 #%%
 from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('pdf', 'png')
-#%%
-#import src.config.my_plt as plt
-#from CohenimPy.config import my_plt as plt
+#%% Configure the matplotlib plt
 import matplotlib.pyplot as plt
+figsize_scale = 0.66
+#plt.rcParams['axes.facecolor'] = None # ? for Dark Theme's...
+plt.rcParams.update({
+    'figure.figsize' : [16*figsize_scale, 9*figsize_scale], # [6.4, 4.8]
+    'axes.labelsize': 18 ,
+    'axes.titlesize' : 20 ,
+    'font.size' : 16 ,
+    'lines.linewidth' :  2.0,
+    'lines.markersize' :  9,
+    'legend.fontsize': 14,
+    'savefig.dpi' : 75,
+    'figure.autolayout': False,
+    'text.usetex': True,
+    'font.family': 'serif',
+    #"pgf.texsystem":  "pdflatex",#"xelatex",
+    # "font.serif": ["Palatino"], # or Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman 
+    # font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif    
+    # Here we can call Latex directly:    
+    'text.latex.preamble' : r'\usepackage{fourier} \usepackage{underscore} \usepackage{fontawesome}' # \usepackage{underscore} : to neglict tex '_' . otherwise the latex dosent work!
+    # \usepackage{amsmath} \usepackage[T1]{fontenc} \usepackage[utf8x]{inputenc}'
+})
+# my_plt.style.use('seaborn') # pretty matplotlib plots
 
 import matplotlib.colors as mcolors
 colors = list(mcolors.TABLEAU_COLORS) 
@@ -48,11 +74,11 @@ linestyles = linestyle_tuple
 bbox1= (0.1, -0.12)
 bbox2= (0.9, -0.12)
 # plt.style.use('seaborn') # pretty matplotlib plots
-
+#%%
 def printVersion():
-    print('CohenimPy Version: 0.0170')
+    print('CohenimPy Version: 0.0171')
     return
-
+#%%
 def list_rotate(seq, n):
     if seq==[]:
         return seq

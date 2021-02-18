@@ -4,11 +4,8 @@
 # my functions and oter iports
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
 import numpy as np
 import statsmodels.api as sm
-
 # %%
 def col_that(name_str,columns):
     return [col for col in columns if name_str in col]

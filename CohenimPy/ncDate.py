@@ -7,8 +7,6 @@ Created on Mon Nov 16 11:23:37 2020
 from datetime import datetime
 import pandas as pd
 
-
-
 # %%
 def period(index, **kwargs):
     '''
@@ -23,7 +21,6 @@ def period(index, **kwargs):
     if 'end' in kwargs.keys():
         end = datetime.fromisoformat(kwargs['end'])
     return [(t>= start)and(t<= end) for t in index]
-
 
 def Get_data(file):
     df = pd.read_csv(file,index_col=0)
