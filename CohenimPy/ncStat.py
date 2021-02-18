@@ -2,9 +2,9 @@
 # Nimrod Cohen, November 2020
 # %% code_folding=[]
 # my functions and oter iports
-import CohenimPy.config 
-from CohenimPy.config import my_pd as pd
-from CohenimPy.config import my_plt as plt
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 import numpy as np
 import statsmodels.api as sm

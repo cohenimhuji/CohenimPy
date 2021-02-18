@@ -9,11 +9,9 @@ helpfull function for phblishing
 """
 import subprocess
 import os
-import CohenimPy.config as config
 
 # %%
-def NBtoTex(current_NB_path,nb_name):    
-    project_path = config.project_path    
+def NBtoTex(current_NB_path,project_path,nb_name):        
     os.chdir(current_NB_path)
     ###################################################
     ### IMPORTENT : update Notebook file_name below ###
