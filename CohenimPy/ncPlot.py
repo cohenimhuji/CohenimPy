@@ -9,8 +9,6 @@ helpfull function for ploting and saving figure in usfull formats
 """
 import numpy as np
 import subprocess
-
-
 #%% Configure Pandas
 import pandas as pd
 pd.set_option('precision', 1)
@@ -27,16 +25,16 @@ figsize_scale = 0.66
 #plt.rcParams['axes.facecolor'] = None # ? for Dark Theme's...
 plt.rcParams.update({
     'figure.figsize' : [16*figsize_scale, 9*figsize_scale], # [6.4, 4.8]
-    'axes.labelsize': 18 ,
-    'axes.titlesize' : 20 ,
-    'font.size' : 16 ,
-    'lines.linewidth' :  2.0,
-    'lines.markersize' :  9,
-    'legend.fontsize': 14,
-    'savefig.dpi' : 75,
-    'figure.autolayout': False,
-    'text.usetex': True,
-    'font.family': 'serif',
+    'axes.labelsize':   18 ,
+    'axes.titlesize' :  20 ,
+    'font.size' :       16 ,
+    'lines.linewidth' : 2.0,
+    'lines.markersize': 9,
+    'legend.fontsize':  14,
+    'savefig.dpi' :     75,
+    'figure.autolayout':    False,
+    'text.usetex':          True,
+    'font.family':      'serif',
     #"pgf.texsystem":  "pdflatex",#"xelatex",
     # "font.serif": ["Palatino"], # or Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman 
     # font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif    
