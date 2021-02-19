@@ -22,27 +22,28 @@ set_matplotlib_formats('pdf', 'png')
 #%% Configure the matplotlib plt
 import matplotlib.pyplot as plt
 figsize_scale = 0.66
-#plt.rcParams['axes.facecolor'] = None # ? for Dark Theme's...
-plt.rcParams.update({
-    'figure.figsize' : [16*figsize_scale, 9*figsize_scale], # [6.4, 4.8]
-    'axes.labelsize':   18 ,
-    'axes.titlesize' :  20 ,
-    'font.size' :       16 ,
-    'lines.linewidth' : 2.0,
-    'lines.markersize': 9,
-    'legend.fontsize':  14,
-    'savefig.dpi' :     75,
-    'figure.autolayout':    False,
-    'text.usetex':          True,
-    'font.family':      'serif',
-    #"pgf.texsystem":  "pdflatex",#"xelatex",
-    # "font.serif": ["Palatino"], # or Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman 
-    # font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif    
-    # Here we can call Latex directly:    
-    'text.latex.preamble' : r'\usepackage{fourier} \usepackage{underscore} \usepackage{fontawesome}' # \usepackage{underscore} : to neglict tex '_' . otherwise the latex dosent work!
-    # \usepackage{amsmath} \usepackage[T1]{fontenc} \usepackage[utf8x]{inputenc}'
-})
-# my_plt.style.use('seaborn') # pretty matplotlib plots
+
+figStyle = {'figure.figsize' : [16*figsize_scale, 9*figsize_scale], # [6.4, 4.8]
+            'axes.labelsize':   18 ,
+            'axes.titlesize' :  20 ,
+            # 'axes.facecolor' : None # ? for Dark Theme's...
+            'font.size' :       16 ,
+            'lines.linewidth' : 2.0,
+            'lines.markersize': 9,
+            'legend.fontsize':  14,
+            'savefig.dpi' :     75,
+            'figure.autolayout':False,
+            'text.usetex':      True,
+            'font.family':      'serif',
+            #"pgf.texsystem":  "pdflatex",#"xelatex",
+            # "font.serif": ["Palatino"], # or Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman 
+            # font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif    
+            # Here we can call Latex directly:    
+            'text.latex.preamble' : r'\usepackage{fourier} \usepackage{underscore} \usepackage{fontawesome}' # \usepackage{underscore} : to neglict tex '_' . otherwise the latex dosent work!
+            # \usepackage{amsmath} \usepackage[T1]{fontenc} \usepackage[utf8x]{inputenc}'            
+            }
+# plt.style.use('seaborn') # pretty matplotlib plots
+plt.rcParams.update(figStyle)
 
 import matplotlib.colors as mcolors
 colors = list(mcolors.TABLEAU_COLORS) 
