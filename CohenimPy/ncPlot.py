@@ -74,7 +74,7 @@ bbox2= (0.9, -0.12)
 # plt.style.use('seaborn') # pretty matplotlib plots
 #%%
 def printVersion():
-    print('CohenimPy Version: 0.0171')
+    print('CohenimPy Version: 0.0172')
     return
 #%%
 def list_rotate(seq, n):
