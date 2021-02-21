@@ -31,6 +31,7 @@ figStyle = {'figure.figsize' : [16*figsize_scale, 9*figsize_scale], # [6.4, 4.8]
             'lines.linewidth' : 2.0,
             'lines.markersize': 9,
             'legend.fontsize':  14,
+            'legend.shadow' :   True,
             'savefig.dpi' :     75,
             'figure.autolayout':False,
             'text.usetex':      True,
