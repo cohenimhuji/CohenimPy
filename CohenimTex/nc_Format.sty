@@ -1,0 +1,478 @@
+\ProvidesPackage{nc_Format}
+%\ProvidesPackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Format}
+
+% to take thing from CHAD:
+
+
+% %  cohenimstyle.sty   Nimrod Cohen 1/2020
+% %  Based on chadstyle.sty   Chad Jones, 5/1/08
+% %
+% %  Chad's style file for nice paper format.
+% %  Various ideas for this style are taken from
+% %    -- Matthias Doepke and Michele Tertilt
+% %    -- Tony Roberts
+
+% %% page layout
+% \special{papersize=8.5in,11in}
+% %\usepackage[left=1.25in, right=1.25in, top=1.0in, bottom=1.15in, includehead, includefoot]{geometry}
+% %\usepackage[a4paper,text={16.5cm,25.2cm},centering]{geometry}
+
+
+
+% \usepackage{fourier} %\usepackage{palatino}
+
+% \usepackage{amssymb,amsfonts,amsmath,latexsym,setspace}
+% \usepackage[dvips]{graphicx}
+% \usepackage{natbib,fancyhdr}
+
+
+
+% % example file to change the style of LaTeX
+% % Tony Roberts May 2004
+% % first colour for latex or pdflatex
+% \ifx\pdfoutput\@undefined\usepackage[usenames,dvips]{color}
+% \else\usepackage[usenames,dvipsnames]{color}
+% % and fix pdf colour problems
+% \IfFileExists{pdfcolmk.sty}{\usepackage{pdfcolmk}}{} 
+% \fi
+
+% % Chad's colors:
+% % See http://web.njit.edu/~kevin/rgb.txt.html for possibilities
+% \definecolor{ChadDarkBlue}{rgb}{.1,0,.2}  
+% \definecolor{ChadBlue}{rgb}{.1,.1,.5}  
+% \definecolor{ChadRoyal}{rgb}{.2,.2,.8}  
+% %\definecolor{ChadGreen}{rgb}{0,.35,.1}
+% %\definecolor{ChadGreen}{rgb}{0,.5,.25}  % Too bright
+% %\definecolor{ChadGreen}{rgb}{0,.4,.2}    % Still too bright
+% \definecolor{ChadGreen}{rgb}{0,.4,0}    % Dark Green
+% %\definecolor{ChadRed}{rgb}{.8,.1,.2}    % Too bright
+% \definecolor{ChadRed}{rgb}{.5,0,.5}  % purple
+
+% % Bank of Israel Colors:
+% \definecolor{BoI_blue}{rgb}{0,0.373,0.545} %  (0,95,139)/255
+% \definecolor{BoI_azure}{rgb}{0.145,0.616,0.835} 
+% \definecolor{BoI_bluegray}{rgb}{0.353,0.439,0.502} 
+% \definecolor{BoI_GreenGras}{rgb}{0.376,0.596,0.325} 
+
+
+
+% %%% HYPERLINKS %%%%%%%%%%%%%%%%%%%%%
+% \usepackage[colorlinks,breaklinks,   % deleted ps2pdf 11/6/15
+%      bookmarks=false,
+%      pdfstartview=Fit,  % for fitting entire page; FitW just fits width
+%      pdfview=Fit,       % after traversing a hyperlink
+%      linkcolor=ChadRed,
+%      urlcolor=ChadGreen,
+%      citecolor=Black,
+%      hyperfootnotes=false
+%          ]{hyperref}
+% %\usepackage[citecolor=blue, colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+% \usepackage[figure,table]{hypcap} % Correct a problem with hyperref
+% \urlstyle{rm} %so it doesn't use a typewriter font for url's.
+
+% %%%%%%%%%%%%%%%%%%%%%
+
+
+% % Fix title, sections, etc.
+
+% \let\LaTeXtitle\title
+% \renewcommand{\title}[1]{\LaTeXtitle{\color{ChadBlue}{\LARGE #1}}}
+% \renewcommand{\abstractname}{\color{ChadBlue}Abstract}
+% \renewcommand{\figurename}{\color{ChadBlue}Figure}
+% \renewcommand{\tablename}{\color{ChadBlue}Table}
+
+% \let\LaTeX@startsection\@startsection 
+% \renewcommand{\@startsection}[6]{\LaTeX@startsection%
+% {#1}{#2}{#3}{#4}{#5}{\color{ChadBlue}\raggedright #6}} 
+
+% %% % Fix periods at end of section numbers
+% %% \renewcommand \thesection {\@arabic\c@section.}
+% %% \renewcommand\thesubsection   {\thesection\@arabic\c@subsection}%.}
+% %% \renewcommand\thesubsubsection{\thesubsection \@arabic\c@subsubsection}%.}
+
+
+% % Add a period *only* after Section and *only* in title, not cross ref
+% % April 2017
+% \makeatletter
+% \renewcommand{\@seccntformat}[1]{%
+%   \csname the#1\endcsname% Print sectional counter
+%   \ifnum\pdfstrcmp{#1}{section}=0 .\fi% If \section, print .
+%   \quad% Space between number and title
+% }
+% \makeatother
+
+
+
+% % Margin, Paragraph Setup
+% \onehalfspacing
+% %\textheight=21.5cm \textwidth=14.95cm \topmargin=-5.5mm
+% %\oddsidemargin=8mm \evensidemargin=8mm
+% \textheight=20.5cm \textwidth=14.35cm \topmargin=0mm
+% \oddsidemargin=11mm \evensidemargin=11mm
+% %\setlength{\parindent}{0em} 
+% %\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
+% %\setlength{\parsep}{0pt}
+% \setlength{\parskip}{0pt}
+
+% % This is how to control linespacing using setspace
+% % (\singlespacing or doublespacing just call this command)
+% \setstretch{1.4}
+
+% %% Setting up page headers
+% \pagestyle{fancy}
+% \rhead[]{\thepage}
+% \lhead[\thepage]{}
+% \cfoot[]{} 
+% \renewcommand{\headrulewidth}{0pt}
+% \fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}% Add something BIG in the header
+% \setlength{\headheight}{15pt} 
+
+
+
+
+% \newcommand{\runningheads}[2]{
+%    \chead[\color{ChadGreen}{\uppercase {\footnotesize #1}}]  % Author page header
+%    {\color{ChadGreen}{\uppercase {\footnotesize #2}}}  % Short title
+%   }
+
+% % Make hyperlinks jump more accurately
+% \makeatletter
+% \newcommand\org@hypertarget{}
+% \let\org@hypertarget\hypertarget
+% \renewcommand\hypertarget[2]{%
+% \Hy@raisedlink{\org@hypertarget{#1}{}}#2%
+% } \makeatother 
+
+
+% % Spacing in Tables and Figures
+% %\renewcommand{\tabcolsep}{1pt}   % space between columns
+% \renewcommand{\arraystretch}{1.5} % space between rows
+% \addtolength{\textfloatsep}{0pt} % space between floats and text
+% \addtolength{\abovecaptionskip}{0pt} % space above caption
+% \addtolength{\belowcaptionskip}{.15in} % space below caption
+
+% \newcommand{\spc}[0]{\vspace{.1in}}
+% \newcommand{\fignote}[2]{\begin{center}\parbox[c]{#1}{\footnotesize #2} \end{center}}
+% \newcommand{\tabnote}[2]{\begin{center}\parbox[c]{#1}{\footnotesize #2} \end{center}}
+% \newcommand{\clr}[1]{{\color{ChadBlue} #1}}
+% \newcommand{\boxeq}[1]{\boxed{\hspace{.25in} #1 \hspace{.25in}}} 
+
+% \newcommand{\bb}[1]{\color{ChadBlue}{#1}}
+% \newcommand{\clrg}[1]{\color{ChadGreen}{#1}}
+% \newcommand{\gn}[1]{{\color{ChadGreen}{#1}}}
+% \newcommand{\gr}[1]{\tiny\textcolor{green4}{#1}}
+% \newcommand{\rd}[1]{\textcolor{ChadRed}{#1}}
+% \newcommand{\rr}[1]{\textcolor{red}{#1}}
+% \newcommand{\imp}[0]{$\Rightarrow \,$} % implies
+
+% %% Shortcut commands
+% \newcommand{\growth}[1]{\frac{\dot{#1}_t}{{#1}_t}}
+% \newcommand{\prtl}[2]{\frac{\partial #1}{\partial #2}}
+% \newcommand{\prtlsec}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+% \newcommand{\commentno}[2]{\underset{\mbox{#2}}{#1}}
+% \newcommand{\comment}[2]{\underbrace{#1}_{\mbox{{\small \color{ChadGreen}#2}}}}
+% \newcommand{\cn}[1]{\citet*{#1}}
+% \newcommand{\cnp}[1]{(\citealt{#1})}  % (Jones 2002)
+% \newcommand{\up}[0]{\uparrow \hspace{-.5ex}}  % \! is a negative thinspace
+% \newcommand{\down}[0]{\downarrow \hspace{-.5ex}}
+% \newcommand{\query}[1]{{\it \color{red}[??? #1]}}
+
+
+% %\newcommand{\fignote}[2]{\begin{center}\parbox[c]{#1}{\footnotesize #2} \end{center}}
+% %\newcommand{\tabnote}[2]{\begin{center}\parbox[c]{#1}{\footnotesize #2} \end{center}}
+% \newcommand{\Prob}[1]{\mbox{\textnormal{Pr}} \, [#1] }
+% \newcommand{\SubSubSection}[1]{\subsubsection{#1} \baselineskip=18pt}
+% \newcommand{\problem}[2]{\hspace{.1in} {{\color{ChadBlue}{\bf #1:} #2}}}
+% \newcommand{\proptitle}[1]{\color{ChadBlue} \textnormal{(#1):}}
+% \newtheorem{proposition}{\color{ChadGreen} Proposition}
+% \newcommand{\assume}[2]{{\bf{Assumption #1}} (#2)} 
+% \newcommand{\Ex}[1]{\mbox{ }\mathbb{E}}
+% \newcommand{\Proof}[2]{{\hspace{-\parindent} {\color{ChadGreen}\bf Proof of Proposition}~\ref{#1}.}
+% {\color{ChadBlue} #2} \vspace{.1in}}
+% %\newcommand{\Proof}[2]{\newline {\hspace{-\parindent} {\color{ChadGreen}\bf Proof of Proposition}~\ref{#1}.}
+% %{\color{ChadBlue} #2} \vspace{.1in}}
+
+
+% \newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)}  % frac with large paren
+
+
+
+% --- CHAD END
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%  MY STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\g@addto@macro{\endabstract}{\@setabstract}
+%\makeatother
+
+% Load usepackages
+    %\usepackage{epsfig}
+    \usepackage{graphics, stackrel}
+    \usepackage{amsmath, amssymb, amsthm}
+    \usepackage{graphicx}
+    \usepackage{verbatim}
+    \usepackage{amsfonts}
+    \usepackage{natbib}
+    \usepackage{enumitem}
+    %font
+    %---------
+    % Computer Modern Family (by Donald E. Knuth)
+    %\usepackage{lmodern} % like amsfonts! 
+    \usepackage[T1]{fontenc}
+
+    % cohenim: 
+    % this line make font look modern.  
+    % without it we get Times fonts like clasical article
+    % URW *Palladio*:  
+    %(as the original of this temlate)
+    %\usepackage{mathpazo} % which is the same as: \usepackage{pxfonts}
+
+    % cohenim:  CAHD and John H. Cochrane style:)...
+    % *Utopia* (Utopia Regular with Fourier)
+    \usepackage{fourier} % which is almost identical to: \usepackage[adobe-utopia]{mathdesign}
+    %\usepackage{cochineal}          % not far from utopia / fourier
+    %  URW Nimbus Roman: 
+    % \usepackage{mathptmx}  % most simmiler to Time New Roman?
+    % or \usepackage{txfonts}?
+
+    % BoI Formal Fonts
+    %\usepackage{mdsymbol}    
+    % or
+    %\usepackage[scaled]{uarial}
+    %\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+    %------------
+
+    %\usepackage{tgpagella}
+
+    %subfloats / figures
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    \usepackage[normalem]{ulem}
+    %\usepackage{soul}
+    \usepackage{fontawesome}
+    
+%--- more to check...
+%\usepackage{bm,url}
+%\usepackage{microtype,todonotes}
+%\usepackage[australian]{babel}
+%\usepackage[compact,small]{titlesec}
+%\clubpenalty = 10000
+%\widowpenalty = 10000
+%---
+
+% For pandas latex tables
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage[usenames, dvipsnames, svgnames,table]{xcolor}
+\usepackage{sectsty,titling}
+
+
+        % TO TRY THIS:
+        % \usepackage{microtype}
+        % \usepackage[margin=15pt,font=small,labelfont={bf,sf}]{caption}
+        % To additionally use Source Sans Pro for the headings, include
+        %\usepackage[semibold]{sourcesanspro}
+        % or maybe : \usepackage[semibold]{helvet} ?        
+        %\allsectionsfont{\sffamily}
+        % ****
+
+        \definecolor{BoI_blue}{rgb}{0,0.373,0.545} %  (0,95,139)/255
+        \definecolor{BoI_azure}{rgb}{0.145,0.616,0.835} 
+        \definecolor{BoI_bluegray}{rgb}{0.353,0.439,0.502} 
+        \definecolor{BoI_GreenGras}{rgb}{0.376,0.596,0.325} 
+
+        \sectionfont{\color{BoI_azure}}
+        %\sectionfont{\color{red}}
+        \subsectionfont{\color{BoI_GreenGras}}
+        %\subsectionfont{\color{green!80!black}}
+        \subsubsectionfont{\color{BoI_bluegray}}
+        %\subsubsectionfont{\color{blue!50!white}}
+
+        %\pretitle{\begin{center}\LARGE\textcolor{BoI_blue}}
+        %\posttitle{\par\end{center}\vskip 1em}
+    
+%     TABLEAU_COLORS
+        \definecolor{tab:blue}{rgb}{0.12156862745098039, 0.4666666666666667, 0.7058823529411765} 
+        \definecolor{tab:orange}{rgb}{1.0, 0.4980392156862745, 0.054901960784313725} 
+        \definecolor{tab:green}{rgb}{0.17254901960784313, 0.6274509803921569, 0.17254901960784313} 
+        \definecolor{tab:red}{rgb}{0.8392156862745098, 0.15294117647058825, 0.1568627450980392} 
+        \definecolor{tab:purple}{rgb}{0.5803921568627451, 0.403921568627451, 0.7411764705882353} 
+        \definecolor{tab:brown}{rgb}{0.5490196078431373, 0.33725490196078434, 0.29411764705882354} 
+        \definecolor{tab:pink}{rgb}{0.8901960784313725, 0.4666666666666667, 0.7607843137254902}
+        \definecolor{tab:gray}{rgb}{0.4980392156862745, 0.4980392156862745, 0.4980392156862745} 
+        \definecolor{tab:olive}{rgb}{0.7372549019607844, 0.7411764705882353, 0.13333333333333333} 
+        \definecolor{tab:cyan}{rgb}{0.09019607843137255, 0.7450980392156863, 0.8117647058823529} 
+        
+    \usepackage{mdwlist}
+    % lists
+    \usepackage{enumitem}
+    \setlist[enumerate]{itemsep=2pt,topsep=3pt}
+    \setlist[itemize]{itemsep=2pt,topsep=3pt}
+    \setlist[enumerate,1]{label=(\alph*)}
+
+    % caligraphic
+    \usepackage{mathrsfs}
+    \usepackage{bbm}
+
+%% page layout
+\usepackage[left=1.25in, right=1.25in, top=1.0in, bottom=1.15in, includehead, includefoot]{geometry}
+%\usepackage[a4paper,text={16.5cm,25.2cm},centering]{geometry}
+
+\usepackage[citecolor=blue, colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+
+%\usepackage{xcolor}
+\usepackage[utf8x]{inputenc}
+%\usepackage[utf8]{inputenc}
+\newcommand*{\setfont}[1]{\fontfamily{#1}\selectfont}
+%    \newcommand{\NIS}{\setsansfont{DejaVu Sans} \textsf{\symbol{"20AA}}}  % ?? Shekel
+
+
+%\usepackage[hebrew,english]{babel}
+%\usepackage{cjhebrew}
+
+
+
+    % nice inequalities
+    \renewcommand{\leq}{\leqslant}
+    \renewcommand{\geq}{\geqslant}
+
+    % inner product
+    \providecommand{\inner}[1]{\left\langle{#1}\right\rangle}
+    \providecommand{\innerp}[1]{\left\langle{#1}\right\rangle_\pi}
+
+\usepackage[ruled, linesnumbered]{algorithm2e}
+% End Load usepackages
+
+%extra spacing
+\renewcommand{\baselinestretch}{1.25}
+
+%horizonal line
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+% skip a line between paragraphs, no indentation
+\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
+\setlength{\parindent}{0pt}
+
+% footnote without a maker (blfootnote)
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\cl}{cl}
+%\DeclareMathOperator{\overset{\circ}}{int}
+\DeclareMathOperator{\Prob}{Prob}
+\DeclareMathOperator{\determinant}{det}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\graph}{graph}
+
+% mics short cuts and symbols
+\newcommand{\st}{\ensuremath{\ \mathrm{s.t.}\ }}
+\newcommand{\setntn}[2]{ \{ #1 : #2 \} }
+\newcommand{\fore}{\therefore \quad}
+\newcommand{\preqsd}{\preceq_{sd} }
+\newcommand{\toas}{\stackrel {\textrm{ \scriptsize{a.s.} }} {\to} }
+\newcommand{\tod}{\stackrel { d } {\to} }
+\newcommand{\tou}{\stackrel { u } {\to} }
+\newcommand{\toweak}{\stackrel { w } {\to} }
+\newcommand{\topr}{\stackrel { p } {\to} }
+\newcommand{\disteq}{\stackrel { \mathscr D } {=} }
+\newcommand{\eqdist}{\stackrel {\textrm{ \scriptsize{d} }} {=} }
+\newcommand{\iidsim}{\stackrel {\textrm{ {\sc iid }}} {\sim} }
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\dee}{\,{\rm d}}
+\newcommand{\og}{{\mathbbm G}}
+\newcommand{\ctimes}{\! \times \!}
+\newcommand{\sint}{{\textstyle\int}}
+\newcommand{\A}{\forall}
+
+% d for integrals
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\e{\mathrm{e}}
+
+% Special symbols and shortcuts
+\newcommand{\rR}{\mathcal R}
+\newcommand{\infot}{\fF_t}
+\newcommand{\given}{\,|\,}
+\newcommand{\pspace}{\mathscr{P}(\mathsf{X})}
+\newcommand{\cspace}{\mathscr{C}(\mathsf{X})}
+%\renewcommand{\times}{\! \times \!}
+\newcommand{\aA}{\mathscr A}
+\newcommand{\cC}{\mathscr C}
+\newcommand{\dD}{\mathscr D}
+\newcommand{\sS}{\mathcal S}
+\newcommand{\bB}{\mathscr B}
+\newcommand{\oO}{\mathcal O}
+\newcommand{\gG}{\mathcal G}
+\newcommand{\hH}{\mathcal H}
+\newcommand{\kK}{\mathcal K}
+\newcommand{\iI}{\mathcal I}
+\newcommand{\mM}{\mathcal M}
+\newcommand{\eE}{\mathcal E}
+\newcommand{\fF}{\mathscr F}
+\newcommand{\qQ}{\mathcal Q}
+\newcommand{\tT}{\mathcal T}
+\newcommand{\xX}{\mathcal X}
+\newcommand{\yY}{\mathcal Y}
+\newcommand{\zZ}{\mathcal Z}
+\newcommand{\wW}{\mathcal W}
+\newcommand{\uU}{\mathcal U}
+\newcommand{\lL}{\mathcal L}
+\newcommand{\pP}{\mathscr P}
+\newcommand{\vV}{\mathcal V}
+\newcommand{\BB}{\mathbbm B}
+\newcommand{\RR}{\mathbbm R}
+\newcommand{\CC}{\mathbbm C}
+\newcommand{\QQ}{\mathbbm Q}
+\newcommand{\NN}{\mathbbm N}
+\newcommand{\GG}{\mathbbm G}
+\newcommand{\UU}{\mathbbm U}
+\newcommand{\YY}{\mathbbm Y}
+\newcommand{\ZZ}{\mathbbm Z}
+\newcommand{\KK}{\mathbbm K}
+\newcommand{\PP}{\mathbbm P}
+\newcommand{\XX}{\mathsf X}
+\newcommand{\WW}{\mathsf W}
+\newcommand{\EE}{\mathbbm E}
+\newcommand{\var}{\mathbbm V}
+\newcommand{\bP}{\mathbf P}
+\newcommand{\bQ}{\mathbf Q}
+\newcommand{\bE}{\mathbf E}
+\newcommand{\bM}{\mathbf M}
+\newcommand{\bX}{\mathbf X}
+\newcommand{\bY}{\mathbf Y}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{condition}{Condition}[section]
+
+%\DeclareTextFontCommand{\emph}{\bfseries}
+
+%%%%%%%%%%%%%%%%%% end my preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
