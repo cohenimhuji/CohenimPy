@@ -1,0 +1,67 @@
+\ProvidesPackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Colors}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %%%%%%%%%% COLORS 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% TABLEAU_COLORS
+    \definecolor{tab:blue}{rgb}{0.12156862745098039, 0.4666666666666667, 0.7058823529411765} 
+    \definecolor{tab:orange}{rgb}{1.0, 0.4980392156862745, 0.054901960784313725} 
+    \definecolor{tab:green}{rgb}{0.17254901960784313, 0.6274509803921569, 0.17254901960784313} 
+    \definecolor{tab:red}{rgb}{0.8392156862745098, 0.15294117647058825, 0.1568627450980392} 
+    \definecolor{tab:purple}{rgb}{0.5803921568627451, 0.403921568627451, 0.7411764705882353} 
+    \definecolor{tab:brown}{rgb}{0.5490196078431373, 0.33725490196078434, 0.29411764705882354} 
+    \definecolor{tab:pink}{rgb}{0.8901960784313725, 0.4666666666666667, 0.7607843137254902}
+    \definecolor{tab:gray}{rgb}{0.4980392156862745, 0.4980392156862745, 0.4980392156862745} 
+    \definecolor{tab:olive}{rgb}{0.7372549019607844, 0.7411764705882353, 0.13333333333333333} 
+    \definecolor{tab:cyan}{rgb}{0.09019607843137255, 0.7450980392156863, 0.8117647058823529}        
+% Chad's colors 
+    \definecolor{ChadDarkBlue}{rgb}{.1,0,.2}  
+    \definecolor{ChadBlue}{rgb}{.1,.1,.5}  
+    \definecolor{ChadRoyal}{rgb}{.2,.2,.8}  
+    \definecolor{ChadGreen}{rgb}{0,.35,.1}
+    \definecolor{ChadDarkGreen}{rgb}{0,.4,0}    
+    \definecolor{ChadRed}{rgb}{.8,.1,.2}    
+    \definecolor{ChadPurple}{rgb}{.5,0,.5}  
+% Bank of Israel Colors:
+    \definecolor{BoiAzure}{rgb}{0.145,0.616,0.835} 
+    \definecolor{BoiGray}{rgb}{0.525,0.529,0.529} 
+    \definecolor{BoiBlack}{rgb}{0.0,0.0,0.0}
+    \definecolor{BoiBlue}{rgb}{0,0.373,0.545} %  (0,95,139)/255
+    \definecolor{BoiBlueGray}{rgb}{0.353,0.439,0.502}        
+    \definecolor{BoiPurpleBright}{rgb}{0.404,0.353,0.529}
+    \definecolor{BoiBordeaux}{rgb}{0.616,0.255,0.369}
+    \definecolor{BoiRed}{rgb}{0.804,0.227,0.212}
+    \definecolor{BoiOrange}{rgb}{0.886,0.522,0.259}
+    \definecolor{BoiYellow}{rgb}{0.878,0.698,0.239}
+    \definecolor{BoiGreen}{rgb}{0.0,0.553,0.541}        
+    \definecolor{BoiGreenGras}{rgb}{0.325,0.596,0.376} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Define my document colors colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newcommand{\myHeaderColor}{tab:gray}        
+    \newcommand{\myTitleColor}{tab:blue}
+    \newcommand{\mySectionsColor}{tab:blue}         
+    \newcommand{\myCaptionsColor}{tab:blue}
+    \newcommand{\myLinkColor}{tab:blue}
+    \newcommand{\myCiteColor}{blue}        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Colors for Section, Figure, etc..
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \sectionfont{\color{\mySectionsColor}}        
+    \subsectionfont{\color{\mySectionsColor}}
+    \subsubsectionfont{\color{\mySectionsColor}}       
+    %\pretitle{\begin{center}\LARGE\textcolor{BoI_blue}}
+    %\posttitle{\par\end{center}\vskip 1em}  
+        
+    % \let\LaTeXtitle\title
+    % \renewcommand{\title}[1]{\LaTeXtitle{\color{\myTitleColor}{\LARGE #1}}}
+    % \renewcommand{\abstractname}{\color{\mySectionsColor}Abstract}
+    \renewcommand{\figurename}{\color{\myCaptionsColor}Figure}
+    \renewcommand{\tablename}{\color{\myCaptionsColor}Table}
+
+    % \let\LaTeX@startsection\@startsection 
+    % \renewcommand{\@startsection}[6]{\LaTeX@startsection%
+    % {#1}{#2}{#3}{#4}{#5}{\color{red}\raggedright #6}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %%% HYPERLINKS %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+    \hypersetup{ colorlinks=true, linkcolor=\myLinkColor, urlcolor=\myLinkColor, citecolor=\myCiteColor}

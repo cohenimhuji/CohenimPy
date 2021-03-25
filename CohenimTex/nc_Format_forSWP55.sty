@@ -1,0 +1,46 @@
+\ProvidesPackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Format_forSWP55}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %%%%%%%%%% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{geometry}
+\usepackage{footmisc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage[bf]{caption}
+\usepackage[space]{grffile}
+\usepackage[T1]{fontenc}
+\usepackage{sectsty}
+\usepackage{color}
+\usepackage{mathpazo}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %%%%%%%%%% Headers 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\definecolor{tab:gray}{rgb}{0.498, 0.498, 0.498} 
+\newcommand{\myHeaderColor}{tab:gray}
+\pagestyle{fancy}
+\rhead[]{\color{\myHeaderColor} \thepage}
+\lhead[\color{\myHeaderColor} \thepage]{}
+\cfoot[]{} 
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}
+\setlength{\headheight}{15pt} 
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+\renewcommand{\labelitemiv}{\tiny{$\square$}}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %%%%%%%%%% Running Headers
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newcommand{\runningheads}[2]{
+\chead[\color{\myHeaderColor}{\footnotesize #1}]       
+{\color{\myHeaderColor}{\footnotesize #2}}   }
+
+%% to put before the first section: 
+%\runningheads{\AuthorNameI, \today}{\ShortTitleName}
+
