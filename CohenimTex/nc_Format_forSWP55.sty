@@ -21,8 +21,12 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 % %%%%%%%%%% Headers 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\definecolor{tab:gray}{rgb}{0.498, 0.498, 0.498} 
+\definecolor{tab:gray}{rgb}{0.498, 0.498, 0.498}
+\definecolor{tab:blue}{rgb}{0.121, 0.466, 0.705} 
+
 \newcommand{\myHeaderColor}{tab:gray}
+\newcommand{\mySectionsColor}{tab:blue}
+
 \pagestyle{fancy}
 \rhead[]{\color{\myHeaderColor} \thepage}
 \lhead[\color{\myHeaderColor} \thepage]{}
@@ -44,3 +48,7 @@
 %% to put before the first section: 
 %\runningheads{\AuthorNameI, \today}{\ShortTitleName}
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\sectionfont{\color{\mySectionsColor}} 
+\subsectionfont{\color{\mySectionsColor}}
+\subsubsectionfont{\color{\mySectionsColor}}  
