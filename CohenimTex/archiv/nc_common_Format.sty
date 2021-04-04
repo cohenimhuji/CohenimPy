@@ -42,17 +42,18 @@
 %\usepackage[hebrew,english]{babel}
 %\usepackage{cjhebrew}
 \usepackage[ruled, linesnumbered]{algorithm2e}
-
-\usepackage{hyperref}
-% \usepackage[colorlinks, breaklinks,   
-%                 linkcolor=blue, urlcolor=blue, citecolor=blue,
-%                 hyperfootnotes=false ]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%%%%%%%%%% COLORS , Define my document colors
+% %%% HYPERLINKS %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{hyperref}
+% \usepackage[colorlinks, breaklinks, linkcolor=blue, urlcolor=blue, citecolor=blue,hyperfootnotes=false ]{hyperref}
+\usepackage[figure,table]{hypcap} % Correct a problem with hyperref
+        \urlstyle{rm} %so it doesn't use a typewriter font for url's.       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%% Define my document COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \usepackage[usenames, dvipsnames, svgnames,table]{xcolor}
-
-\usepackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Colors}
+\usepackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Colors} % Define my document colors
         
 \let\LaTeXtitle\title
 \renewcommand{\title}[1]{\LaTeXtitle{\color{\myTitleColor}{\LARGE #1}}}
@@ -61,11 +62,7 @@
 \let\LaTeX@startsection\@startsection 
 \renewcommand{\@startsection}[6]{\LaTeX@startsection%
 {#1}{#2}{#3}{#4}{#5}{\color{red}\raggedright #6}} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-% %%% HYPERLINKS %%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\usepackage[figure,table]{hypcap} % Correct a problem with hyperref
-        \urlstyle{rm} %so it doesn't use a typewriter font for url's.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %%% My item style
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5

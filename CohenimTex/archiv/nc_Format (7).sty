@@ -22,18 +22,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \usepackage{graphics}
 \usepackage{stackrel}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{graphicx}
 \usepackage{verbatim}
+\usepackage{amsfonts}
 \usepackage{natbib}
 \usepackage{enumitem}
 \usepackage{latexsym}
+\usepackage{fancyhdr}
 \usepackage[normalem]{ulem}
-\usepackage{fontawesome} 
-\usepackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Format_forSWP55}
+\usepackage{fontawesome}  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %   font
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage[T1]{fontenc}
 % URW *Palladio*:  
 %\usepackage{mathpazo} % which is the same as: \usepackage{pxfonts}
 % cohenim:  CAHD and John H. Cochrane style:)...
@@ -56,6 +61,7 @@
 \usepackage{booktabs}
 \usepackage{fancyvrb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{sectsty}
 \usepackage{titling}
         % TO TRY THIS:
         % \usepackage{microtype}
@@ -75,13 +81,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 % %%% HYPERLINKS %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{hyperref}
 % \usepackage[colorlinks, breaklinks, linkcolor=blue, urlcolor=blue, citecolor=blue,hyperfootnotes=false ]{hyperref}
 \usepackage[figure,table]{hypcap} % Correct a problem with hyperref
         \urlstyle{rm} %so it doesn't use a typewriter font for url's.       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%%%%%%%%%% Define my document COLORS and more
+%%%%%%%%%% Define my document COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \usepackage[usenames, dvipsnames, svgnames,table]{xcolor}
+\usepackage{C:/Users/u30l/GitHub/CohenimPy/CohenimTex/nc_Colors} % Define my document colors
         
 \let\LaTeXtitle\title
 \renewcommand{\title}[1]{\LaTeXtitle{\color{\myTitleColor}{\LARGE #1}}}
@@ -101,6 +109,9 @@
         \setlist[itemize]{itemsep=2pt,topsep=3pt}
         \setlist[enumerate,1]{label=(\alph*)}
 
+        \renewcommand{\labelitemii}{$\circ$}
+        \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+        \renewcommand{\labelitemiv}{\tiny{$\square$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
         \newcommand*{\setfont}[1]{\fontfamily{#1}\selectfont}
 %    \newcommand{\NIS}{\setsansfont{DejaVu Sans} \textsf{\symbol{"20AA}}}  % ?? Shekel
@@ -146,7 +157,21 @@
         \DeclareMathOperator{\graph}{graph}
 
         %\DeclareTextFontCommand{\emph}{\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%% Setting up page headers  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+        \pagestyle{fancy}
+        \rhead[]{\color{\myHeaderColor} \thepage}
+        \lhead[\color{\myHeaderColor} \thepage]{}
+        \cfoot[]{} 
+        \renewcommand{\headrulewidth}{0pt}
+        \fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}% Add something BIG in the header
+        \setlength{\headheight}{15pt} 
 
+        \newcommand{\runningheads}[2]{
+                \chead[\color{\myHeaderColor}{\footnotesize #1}]  % Author page header
+                {\color{\myHeaderColor}{\footnotesize #2}}  % Short title
+        }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 % Make hyperlinks jump more accurately
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5

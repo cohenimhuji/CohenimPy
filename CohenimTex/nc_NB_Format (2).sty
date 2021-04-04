@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CALL THIS PACKAGE 
+% insted of \usepackage{mathpazo}
+% in line ~9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{nc_NB_Format}
+
+    %font
+    %---------
+    % Computer Modern Family (by Donald E. Knuth)
+    %\usepackage{lmodern} % like amsfonts! 
+
+    % cohenim: 
+    % this line make font look modern.  
+    % without it we get Times fonts like clasical article
+    % URW *Palladio*:
+    %(as the original of this temlate)
+    %\usepackage{mathpazo} % which is the same as: \usepackage{pxfonts}
+
+    % cohenim: John H. Cochrane style:)...
+    % *Utopia* (Utopia Regular with Fourier)
+    \usepackage{fourier} % which is almost identical to: \usepackage[adobe-utopia]{mathdesign}
+    %\usepackage{cochineal}          % not far from utopia / fourier
+
+    %  URW Nimbus Roman: 
+    %\usepackage{mathptmx}  % most simmiler to Time New Roman?
+    % or \usepackage{txfonts}?
+
+    % BoI Formal Fonts
+    %\usepackage{mdsymbol}    
+    % or
+    %\usepackage[scaled]{uarial}
+    %\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+    %------------
+    
+    % TO TRY THIS:
+    \usepackage{microtype}
+    \usepackage[margin=15pt,font=small,labelfont={bf,sf}]{caption}
+    % ****
+    
+    %\usepackage{tgpagella}
+    \usepackage{sectsty,titling}
+
+        % TO TRY THIS:
+        \allsectionsfont{\sffamily}
+        % ****
+    
+    
+        \definecolor{BoI_blue}{rgb}{0,0.373,0.545} %  (0,95,139)/255
+        \definecolor{BoI_azure}{rgb}{0.145,0.616,0.835} 
+        \definecolor{BoI_bluegray}{rgb}{0.353,0.439,0.502} 
+        \definecolor{BoI_GreenGras}{rgb}{0.376,0.596,0.325} 
+
+        \sectionfont{\color{BoI_azure}}
+        \sectionfont{\color{BoI_azure}}
+        %\sectionfont{\color{red}}
+        \subsectionfont{\color{BoI_GreenGras}}
+        %\subsectionfont{\color{green!80!black}}
+        \subsubsectionfont{\color{BoI_bluegray}}
+        %\subsubsectionfont{\color{blue!50!white}}
+    
+        \pretitle{\begin{center}\LARGE\textcolor{BoI_blue}}
+        \posttitle{\par\end{center}\vskip 1em}
+    
+%\newcommand\NIS{\char"20AA\,}
+%\newcommand{\NIS}{\symbol{"20AA}}
+\title{Notebook for Working Paper}
+\author{Nimrod Cohen}
